@@ -27,7 +27,7 @@ ERROR_TEMPLATE = """
 </html>
 """
 
-@app.route("/score")
+@app.route("/")
 def score_server():
     try:
         if os.path.exists(SCORES_FILE_NAME):
