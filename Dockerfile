@@ -5,13 +5,17 @@ WORKDIR /app
 
 # Copy source code and Scores.txt
 COPY . .
-COPY Scores.txt /Scores.txt
+COPY scores.txt /Scores.txt
 
 # Install dependencies
-RUN pip install --no-cache-dir flask
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the Flask default port (change if needed)
-EXPOSE 5000
+EXPOSE 5001
+
+ENV FLASK_APP=MainScores.py
+
+ENV FLASK_RUN_HOST=0.0.0.0
 
 # Run the Flask app
 CMD ["python", "MainScores.py"]
