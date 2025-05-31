@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  scores-app:
+    build: .
+    ports:
+      - "8777:5001"
+    volumes:
+      - ./dummy/Scores.txt:/Scores.txt  # Dummy file for testing
+    container_name: scores_game
