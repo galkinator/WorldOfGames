@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git(url: 'https://github.com/galkinator/WorldOfGames.git', branch: 'main')
+                sh 'https://github.com/galkinator/WorldOfGames.git'
             }
         }
 
