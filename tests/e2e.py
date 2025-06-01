@@ -27,7 +27,7 @@ def test_scores_service(url):
 
 
 def main_function():
-    url = "http://127.0.0.1:5001/"  # Change if using different host/port
+    url = "http://127.0.0.1:8777/"  # Change if using different host/port
     result = test_scores_service(url)
     if result:
         sys.exit(0)
