@@ -23,7 +23,8 @@ pipeline {
 
         stage('Finalize') {
             steps {
-                sh 'docker-compose down'
+                sh 'docker stop blabla'
+                sh 'docker rm blabla'
             }
         }
     }
