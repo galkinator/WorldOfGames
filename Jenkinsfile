@@ -23,8 +23,8 @@ pipeline {
 
         stage('Finalize') {
             steps {
-                sh 'docker stop container-blabla'
-                sh 'docker rm container-blabla'
+                sh 'docker stop blabla-container'
+                sh 'docker rm blabla-container'
             }
         }
     }
