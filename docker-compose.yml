@@ -1,8 +1,9 @@
 version: "3.8"
 
 services:
-  score-testing:
-    build: .
+  blabla-container:
+    build: .            # This matches your built image name
+    container_name: blabla-container
     ports:
       - "8777:5001"
-    container_name: score-
+    restart: unless-stopped  # Optional: ensures it restarts if it crashes

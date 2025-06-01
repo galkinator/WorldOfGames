@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t blabla .'
+                sh 'docker-compose build'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'docker run -d -p 8777:5001 --name blabla-container blabla'
+                sh 'docker-compose up -d'
                 sleep(time:10, unit:"SECONDS")  // Wait for Flask to start
             }
         }
@@ -23,8 +23,7 @@ pipeline {
 
         stage('Finalize') {
             steps {
-                sh 'docker stop blabla-container'
-                sh 'docker rm blabla-container'
+                sh 'docker-compose down'
             }
         }
     }
