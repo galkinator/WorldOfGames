@@ -4,13 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git(url: 'https://github.com/galkinator/WorldOfGames.git', branch: main)
+                echo "in checkout"
+                git clone https://github.com/galkinator/WorldOfGames.git
             }
         }
 
         stage('Build') {
             steps {
-                sh 'docker build -t scores-game .'
+                sh 'docker-compose up'
             }
         }
 
