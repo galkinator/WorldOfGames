@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'docker run -p 8777:5001 blabla'
+                sh 'docker run -d -p 8777:5001 blabla'
                 sleep(time:10, unit:"SECONDS")  // Wait for Flask to start
             }
         }
