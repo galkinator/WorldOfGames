@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Checkout zz') {
             steps {
                 echo "in checkout"
                 git clone https://github.com/galkinator/WorldOfGames.git
