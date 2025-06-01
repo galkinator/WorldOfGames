@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Checkout zz') {
             steps {
-                echo "in checkout"
-                git clone https://github.com/galkinator/WorldOfGames.git
+                git(url: 'https://github.com/galkinator/WorldOfGames.git', branch: main)
             }
         }
 
