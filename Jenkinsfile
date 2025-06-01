@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'docker run -d -p 8777:5000 -v $PWD/dummy/Scores.txt:/Scores.txt --name scores_test scores-game'
+                sh 'docker run -d -p 8777:5000'
                 sleep(time:10, unit:"SECONDS")  // Wait for Flask to start
             }
         }
