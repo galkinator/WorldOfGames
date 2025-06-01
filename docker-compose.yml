@@ -5,4 +5,4 @@ services:
     build: .
     ports:
       - "8777:5001"
-    container_name: score-testing
+    container_name: score-
