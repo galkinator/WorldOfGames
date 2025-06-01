@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  flask-score-app:
+  score-testing:
     build: .
     ports:
       - "8777:5001"
