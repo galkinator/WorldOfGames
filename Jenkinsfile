@@ -30,8 +30,7 @@ pipeline {
 
         stage('Finalize') {
             steps {
-                sh 'docker stop scores_test'
-                sh 'docker rm scores_test'
+                sh 'docker-compose down'
             }
         }
     }
