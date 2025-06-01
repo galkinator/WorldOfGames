@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'docker-compose up -d --remove-orphans'
                 sleep(time:10, unit:"SECONDS")  // Wait for Flask to start
             }
         }
