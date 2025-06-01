@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout zz') {
-            steps {
-                git(url: 'https://github.com/galkinator/WorldOfGames.git', branch: main)
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker-compose up'
