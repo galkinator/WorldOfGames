@@ -24,6 +24,8 @@ pipeline {
         stage('Finalize') {
             steps {
                 sh 'docker-compose down'
+                sh 'docker tag world_of_games_score-test gilkin/score-test:latest'
+                sh 'docker push gilkin/score-test:latest'
             }
         }
     }
