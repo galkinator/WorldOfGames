@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  blabla-container:
+  score-test:
     build: .            # This matches your built image name
     container_name: blabla-container
     ports:
