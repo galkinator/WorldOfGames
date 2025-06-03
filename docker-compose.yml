@@ -2,8 +2,9 @@ version: "3.8"
 
 services:
   score_test:
-    build: .            # This matches your built image name
+    build: .
+    image: gilkin/score_test:latest
     container_name: blabla-container
     ports:
       - "8777:5001"
-    restart: unless-stopped  # Optional: ensures it restarts if it crashes
+    restart: unless-stopped
