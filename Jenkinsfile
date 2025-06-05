@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('blabla'){
+        stage('checkout'){
             steps{
-                echo 'checking out'
+                git(url: 'https://github.com/galkinator/WorldOfGames.git', branch: 'main')
             }
         }
 
