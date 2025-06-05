@@ -1,0 +1,4 @@
+docker build -t scores-image .
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker run -v ./Scores.txt:/app/Scores.txt -p 8777:8777 --name blabla-container scores-image

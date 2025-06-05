@@ -39,6 +39,6 @@ def score_server():
     except Exception as e:
         return ERROR_TEMPLATE.replace("{ERROR}", str(e))
 
-app.run(host="0.0.0.0", port=5001, debug=True)
+app.run(host="0.0.0.0", port=8777, debug=True)
 
 

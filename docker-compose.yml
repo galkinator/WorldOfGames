@@ -1,10 +1,12 @@
 version: "3.8"
 
 services:
-  score_test:
+  scores-image:
     build: .
-    image: gilkin/score_test:latest
+    image: gilkin/scores-image
     container_name: blabla-container
     ports:
-      - "8777:5001"
+      - "8777:8777"
+    volumes:
+      - ./Scores.txt:/app/Scores.txt
     restart: unless-stopped

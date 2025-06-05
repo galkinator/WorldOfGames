@@ -2,6 +2,10 @@ pipeline {
     agent any
 
     stages {
+        stage('checkout'){
+        echo 'checking out'
+        }
+
         stage('Build') {
             steps {
                 sh 'docker-compose build'

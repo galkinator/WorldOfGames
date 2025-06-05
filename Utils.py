@@ -1,7 +1,7 @@
 import os, platform
 from time import sleep
 
-SCORES_FILE_NAME = "scores.txt"
+SCORES_FILE_NAME = "./Scores.txt"
 BAD_RETURN_CODE = -1
 
 def screen_cleaner():
